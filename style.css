@@ -112,17 +112,34 @@ a{
   border-radius: 10px;
 }
 
-.section-grid {
+.section-grid-outer{
   min-height: 100vh;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 30px;
-	text-align: center;
 }
 
+.section-grid {
+  max-height: 100vh;
+	display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.section-grid img{
+  width: 70%;
+}
+
+.section-grid h2{
+  margin-top: 30px;
+}
 .section-grid p {
 	color: var(--text-color);
 }
+
+.item{
+  grid-row: 2;
+}
+
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -247,7 +264,7 @@ nav a#openup {
 
 .section-test{
   min-height: 200vh;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 
@@ -271,7 +288,7 @@ img{
   box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
   display: flex;
   border-radius: .8rem ;
-  zoom: .7;
+  zoom: .6;
   align-items: center;
   margin: auto;
   margin-top: 3rem;
@@ -287,16 +304,18 @@ img{
 
 .project-card-reason span{
   display: block;
-  color: rgba(0,0,0,.5);
-  font-size: 1.6rem;
+  color: #00f2fe ;
+  opacity: 0.9;
+  font-size: 1.5rem;
   font-weight: 600;
   margin: .5rem 0;
 }
 
 .project-title{
-  font-size: 2.5rem;
+  font-size: 3.0rem;
   margin: 1.5rem 0 2rem;
   color: #4facfe;
+  
 }
 
 .project-description{
@@ -325,4 +344,9 @@ img{
 #carouselExampleIndicators{
   width: 50vh;
   border-radius: .8rem;
+}
+
+.carousel-item img{
+  width: 100%;
+  max-height: 333px;
 }
